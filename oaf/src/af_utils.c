@@ -281,8 +281,10 @@ static int k_vsscanf(const char *buf, const char *fmt, va_list args)
 			break;
 		case 'i':
 			base = 0;
+			__attribute__((fallthrough));
 		case 'd':
 			is_sign = 1;
+			__attribute__((fallthrough));
 		case 'u':
 			break;
 		case '%':
