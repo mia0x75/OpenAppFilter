@@ -1,0 +1,15 @@
+diff --git a/oaf/src/af_utils.c b/oaf/src/af_utils.c
+index c2b3e11..642b264 100755
+--- a/oaf/src/af_utils.c
++++ b/oaf/src/af_utils.c
+@@ -281,8 +281,10 @@ static int k_vsscanf(const char *buf, const char *fmt, va_list args)
+ 			break;
+ 		case 'i':
+ 			base = 0;
++			__attribute__((fallthrough));
+ 		case 'd':
+ 			is_sign = 1;
++			__attribute__((fallthrough));
+ 		case 'u':
+ 			break;
+ 		case '%':
